@@ -37,7 +37,7 @@ function sendMail() {
 	    
 	    $mail->Username   = 'info.videosnap@gmail.com';             // SMTP username
 	    
-	    $mail->Password   = '!Native23';                            // SMTP password
+	    $mail->Password   = 'not-this-password';                            // SMTP password
 	    
 	    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 	    
@@ -45,7 +45,7 @@ function sendMail() {
 
 	    //Recipients
 	    $mail->setFrom('info.videosnap@gmail.com', 'Videosnap Support Team');
-	    $mail->addAddress('neomokhele23@gmail.com');     			// Add a recipient 
+	    $mail->addAddress($_POST["email"]);     			// Add a recipient 
 	    $mail->addReplyTo('info.videosnap@gmail.com', 'Videosnap Support Team');
 
 	    // Attachments
